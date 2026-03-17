@@ -37,6 +37,27 @@ cp .env.example .env
 
 ## Usage
 
+### Web Interface (Recommended)
+
+1. Install backend dependencies:
+```bash
+pip install -r requirements-api.txt
+```
+
+2. Start the backend (in one terminal):
+```bash
+uvicorn backend:app --reload
+```
+
+3. In another terminal, install frontend dependencies:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
 ### Command line:
 ```bash
 python main.py https://github.com/owner/repo-name
@@ -66,10 +87,20 @@ repo-explainer/
 │   ├── summarizer.py      # Core summarization logic
 │   ├── github_client.py    # GitHub API interactions
 │   └── config.py           # Configuration management
-├── main.py                 # Entry point
-├── requirements.txt        # Python dependencies
-├── .env.example            # Environment variable template
-└── README.md               # This file
+├── backend.py              # FastAPI application
+├── frontend/               # React web interface
+│   ├── src/
+│   │   ├── main.jsx       # React entry point
+│   │   ├── App.jsx        # Main component
+│   │   ├── App.css        # Styles
+│   │   └── index.css      # Global styles
+│   ├── vite.config.js     # Vite configuration
+│   └── package.json       # Frontend dependencies
+├── main.py                # CLI entry point
+├── requirements.txt       # CLI dependencies
+├── requirements-api.txt   # API dependencies
+├── .env.example           # Environment variable template
+└── README.md              # This file
 ```
 
 ## License
