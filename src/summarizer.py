@@ -133,7 +133,7 @@ Repository Structure:
                 },
                 {
                     "role": "user",
-                    "c                    pip install pyyaml==6.0.1ntent": f"Please provide a comprehensive summary of this GitHub repository:\n\n{context}",
+                    "content": f"Please provide a comprehensive summary of this GitHub repository:\n\n{context}",
                 },
             ],
             temperature=0.7,
